@@ -2,13 +2,18 @@ import React, { ReactNode, useEffect } from 'react'
 import Router from 'next/router'
 import LoadingPage from '@/components/LoadingPage'
 import { useAuth } from '@/hooks/useAuth'
+import { DashboardLayout } from './DashboardLayout'
 
 interface Props {
+  isStyleDashboard?: boolean
   children?: ReactNode
   // any props that come into the component
 }
 
-export const ProtectedLayout = ({ children }: Props) => {
+export const ProtectedLayout = ({
+  isStyleDashboard = true,
+  children
+}: Props) => {
   const { status } = useAuth()
 
   useEffect(() => {
@@ -17,10 +22,7 @@ export const ProtectedLayout = ({ children }: Props) => {
 
   if (status !== 'authenticated') return <LoadingPage />
 
-  return (
-    <>
-      <h1>EL dashboard</h1>
-      {children}
-    </>
-  )
+  if (!isStyleDashboard) return <>{children}</>
+
+  return <DashboardLayout>{children}</DashboardLayout>
 }
