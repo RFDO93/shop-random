@@ -1,10 +1,10 @@
-import { DashboardLayout } from '@/layouts/DashboardLayout'
+import { ProtectedLayout } from '@/layouts/ProtectedLayout'
 
 const Permission = () => {
   return (
-    <DashboardLayout>
+    <ProtectedLayout>
       <h1>Permission</h1>
-    </DashboardLayout>
+    </ProtectedLayout>
   )
 }
 

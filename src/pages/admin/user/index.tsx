@@ -1,13 +1,11 @@
 import ListComponent from '@/components/ListComponent'
-import { DashboardLayout } from '@/layouts/DashboardLayout'
+import { ProtectedLayout } from '@/layouts/ProtectedLayout'
 
 const User = () => {
   return (
-    <DashboardLayout>
-      <h1>User</h1>
-
+    <ProtectedLayout>
       <ListComponent />
-    </DashboardLayout>
+    </ProtectedLayout>
   )
 }
 

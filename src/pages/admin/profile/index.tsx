@@ -1,10 +1,10 @@
-import { DashboardLayout } from '@/layouts/DashboardLayout'
+import { ProtectedLayout } from '@/layouts/ProtectedLayout'
 
 const Profile = () => {
   return (
-    <DashboardLayout>
+    <ProtectedLayout>
       <h1>Profile</h1>
-    </DashboardLayout>
+    </ProtectedLayout>
   )
 }
 
