@@ -4,6 +4,7 @@ import { MonitorIcon } from '@/assets/icons/MonitorIcon'
 import { ProfileIcon } from '@/assets/icons/ProfileIcon'
 import { SettingIcon } from '@/assets/icons/SettingIcon'
 import { UserIcon } from '@/assets/icons/UserIcon'
+import { LogoutIcon } from '@/assets/icons/LogoutIcon'
 
 type PropsIcon = {
   className?: string
@@ -36,6 +37,10 @@ export const IconsComponent = (props: PropsIcon) => {
 
   if (props.icon === 'user') {
     return <UserIcon {...props} />
+  }
+
+  if (props.icon === 'logout') {
+    return <LogoutIcon {...props} />
   }
 
   return <></>
