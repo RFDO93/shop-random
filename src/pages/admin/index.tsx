@@ -11,7 +11,6 @@ const index = () => {
   return (
     <ProtectedLayout>
       <h1>Home</h1>
-      <button onClick={handleLogout}>Cerrar sesión</button>
     </ProtectedLayout>
   )
 }
